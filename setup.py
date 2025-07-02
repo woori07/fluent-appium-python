@@ -15,11 +15,11 @@ setup(
     description="A fluent interface for Appium automation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/woori07/fluent-appium",
+    url="https://github.com/woori07/fluent-appium-python",
     project_urls={
-        "Bug Reports": "https://github.com/woori07/fluent-appium/issues",
-        "Source": "https://github.com/woori07/fluent-appium",
-        "Documentation": "https://github.com/woori07/fluent-appium#readme",
+        "Bug Reports": "https://github.com/woori07/fluent-appium-python/issues",
+        "Source": "https://github.com/woori07/fluent-appium-python",
+        "Documentation": "https://github.com/woori07/fluent-appium-python#readme",
     },
     packages=find_packages(),
     classifiers=[

@@ -1,4 +1,4 @@
-# Fluent Appium
+# Fluent Appium Python
 
 A fluent wrapper around Appium that transforms complex mobile automation into simple, readable test code.
 
@@ -14,7 +14,7 @@ A fluent wrapper around Appium that transforms complex mobile automation into si
 ## 📦 Installation
 
 ```bash
-pip install git+https://github.com/woori07/fluent-appium.git
+pip install git+https://github.com/woori07/fluent-appium-python.git
 ```
 
 ## 🎯 Quick Start
@@ -180,6 +180,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/woori07/fluent-appium/issues)
-- **Documentation**: [GitHub README](https://github.com/woori07/fluent-appium#readme)
-- **Source Code**: [GitHub Repository](https://github.com/woori07/fluent-appium)
+- **Issues**: [GitHub Issues](https://github.com/woori07/fluent-appium-python/issues)
+- **Documentation**: [GitHub README](https://github.com/woori07/fluent-appium-python#readme)
+- **Source Code**: [GitHub Repository](https://github.com/woori07/fluent-appium-python)
