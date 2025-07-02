@@ -17,6 +17,14 @@ A fluent wrapper around Appium that transforms complex mobile automation into si
 pip install git+https://github.com/woori07/fluent-appium-python.git
 ```
 
+## 🎯 Core Concept
+
+The `page()` function is your **entry point** for mobile automation:
+- **Selects** elements using Appium locators  
+- **Returns** a fluent interface for chaining
+- **Enables** readable, natural test code
+
+
 ## 🎯 Quick Start
 
 ```python

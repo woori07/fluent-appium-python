@@ -29,7 +29,8 @@ def _get_global_driver():
         raise RuntimeError("Driver not set. Call set_driver() or pass driver to page()")
     return _global_driver
 
-# 전역 인스턴스
+# entry point
+# page() 함수는 전역 드라이버를 사용하여 FluentElement를 반환
 page = PageObject(_get_global_driver)
 
 __all__ = ["page", "set_driver"]
