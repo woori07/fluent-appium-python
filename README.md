@@ -14,7 +14,7 @@ A fluent wrapper around Appium that transforms complex mobile automation into si
 ## 📦 Installation
 
 ```bash
-pip install fluent-appium
+pip install git+https://github.com/woori07/fluent-appium.git
 ```
 
 ## 🎯 Quick Start
