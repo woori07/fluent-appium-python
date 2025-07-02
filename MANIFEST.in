@@ -1,4 +1,11 @@
 include README.md
-include requirements.txt
 include LICENSE
+include requirements.txt
+include setup.py
 recursive-include fluent_appium *.py
+recursive-exclude fluent_appium __pycache__
+recursive-exclude fluent_appium *.pyc
+recursive-exclude fluent_appium *.pyo
+exclude .git*
+exclude .pytest_cache
+exclude *.egg-info

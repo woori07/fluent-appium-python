@@ -1,9 +1,10 @@
+from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class InputChain:
-    def __init__(self, locator, driver, timeout, text):
+    def __init__(self, locator, driver: webdriver.Remote, timeout, text):
         self.locator = locator
         self.driver = driver
         self.timeout = timeout

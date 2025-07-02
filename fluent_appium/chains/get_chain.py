@@ -1,8 +1,9 @@
+from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class GetChain:
-    def __init__(self, locator, driver, timeout):
+    def __init__(self, locator, driver: webdriver.Remote, timeout):
         self.locator = locator
         self.driver = driver
         self.timeout = timeout
