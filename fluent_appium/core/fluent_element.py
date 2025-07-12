@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from ..chains.input_chain import InputChain
 from ..chains.get_chain import GetChain
 from .condition_actions import ConditionActions
+from ..utils.debug_helper import strip_stacktrace
 
 class FluentElement:
     def __init__(self, locator, driver: webdriver.Remote, timeout=10):
@@ -23,8 +24,8 @@ class FluentElement:
         try:
             self._wait.until(EC.visibility_of_element_located(self._locator))
             return ConditionActions(self._locator, self._driver, self._timeout)
-        except TimeoutException:
-            raise TimeoutException(f"Element {self._locator} not visible within {self._timeout}s")
+        except TimeoutException as exc:
+            raise TimeoutException(strip_stacktrace(f"Element {self._locator} not visible within {self._timeout}s: {exc}"))
     
     @property
     def is_invisible(self):
@@ -32,8 +33,8 @@ class FluentElement:
         try:
             self._wait.until(EC.invisibility_of_element_located(self._locator))
             return ConditionActions(self._locator, self._driver, self._timeout)
-        except TimeoutException:
-            raise TimeoutException(f"Element {self._locator} still visible after {self._timeout}s")
+        except TimeoutException as exc:
+            raise TimeoutException(strip_stacktrace(f"Element {self._locator} still visible after {self._timeout}s: {exc}"))
     
     @property
     def is_all_visible(self):
@@ -41,8 +42,8 @@ class FluentElement:
         try:
             self._wait.until(EC.visibility_of_all_elements_located(self._locator))
             return ConditionActions(self._locator, self._driver, self._timeout)
-        except TimeoutException:
-            raise TimeoutException(f"Not all elements {self._locator} visible within {self._timeout}s")
+        except TimeoutException as exc:
+            raise TimeoutException(strip_stacktrace(f"Not all elements {self._locator} visible within {self._timeout}s: {exc}"))
     
     @property
     def is_any_visible(self):
@@ -50,8 +51,8 @@ class FluentElement:
         try:
             self._wait.until(EC.visibility_of_any_elements_located(self._locator))
             return ConditionActions(self._locator, self._driver, self._timeout)
-        except TimeoutException:
-            raise TimeoutException(f"No elements {self._locator} visible within {self._timeout}s")
+        except TimeoutException as exc:
+            raise TimeoutException(strip_stacktrace(f"No elements {self._locator} visible within {self._timeout}s: {exc}"))
     
     @property
     def is_clickable(self):
@@ -59,8 +60,8 @@ class FluentElement:
         try:
             self._wait.until(EC.element_to_be_clickable(self._locator))
             return ConditionActions(self._locator, self._driver, self._timeout)
-        except TimeoutException:
-            raise TimeoutException(f"Element {self._locator} not clickable within {self._timeout}s")
+        except TimeoutException as exc:
+            raise TimeoutException(strip_stacktrace(f"Element {self._locator} not clickable within {self._timeout}s: {exc}"))
     
     @property
     def click(self):
